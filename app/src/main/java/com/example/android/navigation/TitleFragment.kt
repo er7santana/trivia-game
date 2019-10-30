@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -21,6 +22,7 @@ class TitleFragment : Fragment() {
 //        binding.playButton.setOnClickListener { view: View ->
 //            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
 //        }
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.app_name)
 
         binding.playButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
 
