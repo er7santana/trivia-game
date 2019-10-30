@@ -34,8 +34,6 @@ class GameWonFragment : Fragment() {
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_won, container, false)
 
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.app_name)
-
         binding.nextMatchButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_gameWonFragment_to_gameFragment))
 
         return binding.root

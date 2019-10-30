@@ -22,8 +22,6 @@ class TitleFragment : Fragment() {
 //        binding.playButton.setOnClickListener { view: View ->
 //            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
 //        }
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.app_name)
-
         binding.playButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
 
         return binding.root
